@@ -1,10 +1,11 @@
 ﻿
+
 using LeaveManagementEFCore.Data;
 using LeaveManagementEFCore.Repositories;
+using LeaveManagementEFCore.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-
 var builder = Host.CreateApplicationBuilder(args);
 
 builder.Services.AddDbContext<AppDbContext>(options =>
@@ -13,6 +14,7 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 // Register EmployeeRepository with Dependency Injection
 builder.Services.AddScoped<EmployeeRepository>();
+builder.Services.AddScoped<EmployeeService>();
 
 using var host = builder.Build();
 
