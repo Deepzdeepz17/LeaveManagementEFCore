@@ -12,4 +12,5 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<Employee> Employees => Set<Employee>();
+    public DbSet<LeaveType> LeaveTypes => Set<LeaveType>();
 }
