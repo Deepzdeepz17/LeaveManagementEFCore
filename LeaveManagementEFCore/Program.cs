@@ -15,6 +15,8 @@ builder.Services.AddDbContext<AppDbContext>(options =>
 
 builder.Services.AddScoped<EmployeeRepository>();
 builder.Services.AddScoped<EmployeeService>();
+builder.Services.AddScoped<LeaveTypeRepository>();
+builder.Services.AddScoped<LeaveTypeService>();
 
 using var host = builder.Build();
 
